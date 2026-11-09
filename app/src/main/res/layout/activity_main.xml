@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/name"
+        android:hint="name"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:focusable="true"
+        android:hint="phone number"
+        android:inputType="text"
+        android:minHeight="48dp" />
+    <EditText
+        android:id="@+id/contactid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phonenumber"
+        android:focusable="true"
+        android:hint="ID"
+        android:inputType="text"
+        android:minHeight="48dp" />
+    <TextView
+        android:id="@+id/textv"
+        android:layout_below="@+id/contactid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ListView
+        android:id="@+id/mobile_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textv"
+        android:background="#2196F3"
+        android:foregroundTint="#960012"/>
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobile_list"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/update"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:text="save" />
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobile_list"
+        android:layout_toLeftOf="@+id/deletebutton"
+        android:text="update" />
+    <Button
+        android:id="@+id/deletebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobile_list"
+        android:layout_toLeftOf="@+id/view"
+        android:text="delete" />
+    <Button
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobile_list"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="view" />
+</RelativeLayout>
